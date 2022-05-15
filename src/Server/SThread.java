@@ -37,6 +37,12 @@ public class SThread extends Thread {
                     outputStream.writeObject(packageData);
                     break;
                 }
+                else if(pd.getOperationType().equals("GET ITEM")){
+                    Item item = manager.getItem(pd.getId());
+                    PackageData packageData = new PackageData(item);
+                    outputStream.writeObject(packageData);
+                    break;
+                }
                 else if(pd.getOperationType().equals("LIST REALTY")){
                     ArrayList<Realty> array = manager.getAllRealty();
                     PackageData packageData = new PackageData();
@@ -59,11 +65,11 @@ public class SThread extends Thread {
                     break;
                 }
                 else if(pd.getOperationType().equals("ADD CART")){
-                    manager.addCart(pd.getUser(), pd.getId());
+                    manager.addCart(pd.getUser(), pd.getItem());
                     break;
                 }
                 else if(pd.getOperationType().equals("LIST CART")){
-                    ArrayList<Item> array = manager.getAllCart(pd.getId());
+                    ArrayList<Item> array = manager.getAllCart(pd.getUser());
                     PackageData packageData = new PackageData();
                     packageData.setItems(array);
                     outputStream.writeObject(packageData);

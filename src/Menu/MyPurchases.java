@@ -15,16 +15,16 @@ public class MyPurchases extends Container {
         setLayout(null);
 
         JButton listButton = new JButton("LIST");
-        listButton.setBounds(70, 50, 360, 25);
+        listButton.setBounds(70, 100, 360, 30);
         add(listButton);
 
         textArea = new JTextArea();
-        textArea.setBounds(70, 145, 360, 170);
+        textArea.setBounds(70, 140, 360, 170);
         add(textArea);
         textArea.setText(null);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 360, 175, 30);
+        backButton.setBounds(70, 320, 360, 30);
         add(backButton);
 
         listButton.addActionListener(new ActionListener() {
@@ -40,7 +40,7 @@ public class MyPurchases extends Container {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main.frame.myAds.setVisible(false);
+                Main.frame.myPurchases.setVisible(false);
                 Main.frame.userMenu.setVisible(true);
             }
         });

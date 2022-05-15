@@ -88,6 +88,21 @@ public class PackageData implements Serializable {
         this.login = login;
     }
 
+    public PackageData(String operationType, User user, Item item) {
+        this.operationType = operationType;
+        this.user = user;
+        this.item = item;
+    }
+
+    public PackageData(User user, Item item) {
+        this.user = user;
+        this.item = item;
+    }
+
+    public PackageData(Item item) {
+        this.item = item;
+    }
+
     public String getOperationType() {
         return operationType;
     }
@@ -182,5 +197,13 @@ public class PackageData implements Serializable {
 
     public void setAnimal(Animal animal) {
         this.animal = animal;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 }

@@ -1,10 +1,7 @@
 package Main;
 import Class.*;
 import DataB.PackageData;
-import Menu.Login;
-import Menu.MainHeadings;
-import Menu.MyAds;
-import Menu.MyPurchases;
+import Menu.*;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -34,6 +31,13 @@ public class Main {
 
                 User user = packageData.getUser();
                 Login.user = user;
+            }
+            else if(pg.getOperationType().equals("GET ITEM")){
+                outputStream.writeObject(pg);
+                PackageData packageData = (PackageData)inputStream.readObject();
+
+                Item item = packageData.getItem();
+                MainHeadings.item = item;
             }
             else if(pg.getOperationType().equals("LIST REALTY")){
                 outputStream.writeObject(pg);
@@ -78,6 +82,7 @@ public class Main {
                     s += arrayList.get(i).info() + "\n";
                 }
                 MyAds.textArea.append(s);
+                DeleteMyAds.textArea.append(s);
             }
             else if(pg.getOperationType().equals("LIST MY CS")){
                 outputStream.writeObject(pg);
@@ -89,6 +94,7 @@ public class Main {
                     s += arrayList.get(i).info() + "\n";
                 }
                 MyAds.textArea.append(s);
+                DeleteMyAds.textArea.append(s);
             }
             else if(pg.getOperationType().equals("LIST MY ANIMAL")){
                 outputStream.writeObject(pg);
@@ -100,6 +106,7 @@ public class Main {
                     s += arrayList.get(i).info() + "\n";
                 }
                 MyAds.textArea.append(s);
+                DeleteMyAds.textArea.append(s);
             }
             else if(pg.getOperationType().equals("LIST CART")){
                 outputStream.writeObject(pg);

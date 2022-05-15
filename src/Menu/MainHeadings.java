@@ -2,7 +2,7 @@ package Menu;
 
 import DataB.PackageData;
 import Main.Main;
-
+import Class.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 
 public class MainHeadings extends Container {
     public static JTextArea textArea;
+    public static Item item;
     public MainHeadings(){
         setSize(500, 500);
         setLayout(null);
@@ -80,7 +81,10 @@ public class MainHeadings extends Container {
         buyProductButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                PackageData pd1 = new PackageData("ADD CART", Login.user, Integer.parseInt(numberField.getText()));
+                PackageData pd3 = new PackageData("GET ITEM", Integer.parseInt(numberField.getText()));
+                Main.connect(pd3);
+
+                PackageData pd1 = new PackageData("ADD CART", Login.user, item);
                 Main.connect(pd1);
 
                 PackageData pd2 = new PackageData("DELETE ITEM", Integer.parseInt(numberField.getText()));

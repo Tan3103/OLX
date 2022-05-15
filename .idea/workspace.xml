@@ -3,14 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="e56ac0d2-d7f7-4fe3-8132-26247e2bdc7c" name="Changes" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Class/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataB/PackageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/PackageData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/AddAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddAnimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/AddCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddCS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddRealty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddRealty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/DeleteMyAds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/DeleteMyAds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/MainHeadings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MainHeadings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/MyAds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MyAds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MyPurchases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MyPurchases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/UserMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/SThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/SThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tannu/IdeaProjects/Phonebook",
+    "last_opened_file_path": "C:/Users/tannu/Downloads/TrainTravel_app",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -97,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652618325497</updated>
-      <workItem from="1652618326935" duration="16016000" />
+      <workItem from="1652618326935" duration="21777000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1652625642715</created>
@@ -127,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652636428433</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new">
+      <created>1652637749532</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652637749532</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

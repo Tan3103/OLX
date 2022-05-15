@@ -14,43 +14,43 @@ public class AddRealty extends Container {
         setLayout(null);
 
         JLabel nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(75, 110, 125, 25);
+        nameLabel.setBounds(75, 100, 125, 30);
         add(nameLabel);
 
         JTextField nameField = new JTextField();
-        nameField.setBounds(225, 110, 200, 25);
+        nameField.setBounds(225, 100, 200, 30);
         add(nameField);
 
         JLabel numberRoomsLabel = new JLabel("Number of rooms:");
-        numberRoomsLabel.setBounds(75, 145, 125, 25);
+        numberRoomsLabel.setBounds(75, 140, 125, 30);
         add(numberRoomsLabel);
 
         JTextField numberRoomsField = new JTextField();
-        numberRoomsField.setBounds(225, 145, 200, 25);
+        numberRoomsField.setBounds(225, 140, 200, 30);
         add(numberRoomsField);
 
         JLabel areaLabel = new JLabel("Total area:");
-        areaLabel.setBounds(75, 180, 125, 25);
+        areaLabel.setBounds(75, 180, 125, 30);
         add(areaLabel);
 
         JTextField areaField = new JTextField();
-        areaField.setBounds(225, 180, 200, 25);
+        areaField.setBounds(225, 180, 200, 30);
         add(areaField);
 
         JLabel costLabel = new JLabel("Price:");
-        costLabel.setBounds(75, 215, 125, 25);
+        costLabel.setBounds(75, 220, 125, 30);
         add(costLabel);
 
         JTextField costField = new JTextField();
-        costField.setBounds(225, 215, 200, 25);
+        costField.setBounds(225, 220, 200, 30);
         add(costField);
 
         JButton addButton = new JButton("Add");
-        addButton.setBounds(75, 320, 170, 30);
+        addButton.setBounds(75, 260, 170, 30);
         add(addButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 320, 170, 30);
+        backButton.setBounds(255, 260, 170, 30);
         add(backButton);
 
         backButton.addActionListener(new ActionListener() {

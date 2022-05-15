@@ -62,7 +62,7 @@ public class UserMenu extends Container {
         adsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Frame.myAds.setVisible(false);
+                Frame.userMenu.setVisible(false);
                 Frame.myAds.setVisible(true);
             }
         });

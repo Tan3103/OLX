@@ -14,43 +14,43 @@ public class AddAnimal extends Container {
         setLayout(null);
 
         JLabel nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(75, 110, 125, 25);
+        nameLabel.setBounds(75, 100, 125, 30);
         add(nameLabel);
 
         JTextField nameField = new JTextField();
-        nameField.setBounds(225, 110, 200, 25);
+        nameField.setBounds(225, 100, 200, 30);
         add(nameField);
 
         JLabel breedLabel = new JLabel("Breed:");
-        breedLabel.setBounds(75, 145, 125, 25);
+        breedLabel.setBounds(75, 140, 125, 30);
         add(breedLabel);
 
         JTextField breedRoomsField = new JTextField();
-        breedRoomsField.setBounds(225, 145, 200, 25);
+        breedRoomsField.setBounds(225, 140, 200, 30);
         add(breedRoomsField);
 
         JLabel ageLabel = new JLabel("Age:");
-        ageLabel.setBounds(75, 180, 125, 25);
+        ageLabel.setBounds(75, 180, 125, 30);
         add(ageLabel);
 
         JTextField ageField = new JTextField();
-        ageField.setBounds(225, 180, 200, 25);
+        ageField.setBounds(225, 180, 200, 30);
         add(ageField);
 
         JLabel costLabel = new JLabel("Price:");
-        costLabel.setBounds(75, 215, 125, 25);
+        costLabel.setBounds(75, 220, 125, 30);
         add(costLabel);
 
         JTextField costField = new JTextField();
-        costField.setBounds(225, 215, 200, 25);
+        costField.setBounds(225, 220, 200, 30);
         add(costField);
 
         JButton addButton = new JButton("Add");
-        addButton.setBounds(75, 320, 170, 30);
+        addButton.setBounds(75, 260, 170, 30);
         add(addButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 320, 170, 30);
+        backButton.setBounds(255, 260, 170, 30);
         add(backButton);
 
         backButton.addActionListener(new ActionListener() {
@@ -64,20 +64,17 @@ public class AddAnimal extends Container {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    Animal newItem = new Animal(null, nameField.getText(),
-                            Integer.parseInt(costField.getText()), breedRoomsField.getText(),
-                            Integer.parseInt(ageField.getText()));
+                Animal newItem = new Animal(null, nameField.getText(),
+                        Integer.parseInt(costField.getText()), breedRoomsField.getText(),
+                        Integer.parseInt(ageField.getText()));
 
-                    PackageData packageData = new PackageData("ADD ANIMAL", newItem, Login.user);
-                    Main.connect(packageData);
+                PackageData packageData = new PackageData("ADD ANIMAL", newItem, Login.user);
+                Main.connect(packageData);
 
-                    nameField.setText(null);
-                    costField.setText(null);
-                    ageField.setText(null);
-                } catch (Exception a) {
-                    a.printStackTrace();
-                }
+                nameField.setText(null);
+                costField.setText(null);
+                ageField.setText(null);
+                breedRoomsField.setText(null);
             }
         });
     }

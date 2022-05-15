@@ -11,19 +11,19 @@ public class AddAd extends Container {
         setLayout(null);
 
         JButton addRealtyButton = new JButton("Add Realty");
-        addRealtyButton.setBounds(355, 50, 75, 25);
+        addRealtyButton.setBounds(70, 100, 360, 40);
         add(addRealtyButton);
 
         JButton addCSButton = new JButton("Add clothing/shoes");
-        addCSButton.setBounds(355, 80, 75, 25);
+        addCSButton.setBounds(70, 150, 360, 40);
         add(addCSButton);
 
         JButton addAnimalButton = new JButton("Add animal");
-        addAnimalButton.setBounds(355, 110, 75, 25);
+        addAnimalButton.setBounds(70, 200, 360, 40);
         add(addAnimalButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(70, 360, 360, 30);
+        backButton.setBounds(70, 250, 360, 40);
         add(backButton);
 
         addRealtyButton.addActionListener(new ActionListener() {

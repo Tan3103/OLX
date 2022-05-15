@@ -32,7 +32,7 @@ public class MyAds extends Container {
         textArea.setText(null);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(70, 360, 360, 30);
+        backButton.setBounds(70, 325, 360, 30);
         add(backButton);
 
         realtyButton.addActionListener(new ActionListener() {

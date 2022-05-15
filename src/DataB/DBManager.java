@@ -133,13 +133,14 @@ public class DBManager {
         }
     }
 
-    public void addCart(User user, Integer item_id) {
+    public void addCart(User user, Item item) {
         try {
             PreparedStatement statement = connection.prepareStatement("" +
-                    "INSERT INTO cart (id, userID, itemID) " +
-                    "VALUES (NULL, ?, ?)");
+                    "INSERT INTO cart (id, userID, name, price) " +
+                    "VALUES (NULL, ?, ?, ?)");
             statement.setInt(1,user.getId());
-            statement.setInt(2, item_id);
+            statement.setString(2, item.getName());
+            statement.setInt(3, item.getPrice());
 
             statement.executeUpdate();
             statement.close();
@@ -148,21 +149,24 @@ public class DBManager {
         }
     }
 
-    public ArrayList<Item> getAllCart(Integer idd){
-        ArrayList<Item> productList = new ArrayList<>();
-        try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM cart WHERE userID = '" + idd + "'");
-            ResultSet resultSet = statement.executeQuery();
+    public ArrayList<Item> getAllCart(User user){
+        ArrayList<Item> List = new ArrayList<>();
+        try {
+            PreparedStatement statement = connection.prepareStatement("" +
+                    "SELECT * FROM cart WHERE userID = '" + user.getId() + "'");
 
-            while (resultSet.next()) {
-                int name = resultSet.getInt("product_id");
-                productList.add(getItem(name));
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int price = resultSet.getInt("price");
+                List.add(new Item(id, name, price));
             }
             statement.close();
         }catch (Exception e){
             e.printStackTrace();
         }
-        return productList;
+        return List;
     }
 
     public Item getItem(Integer idd){

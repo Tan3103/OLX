@@ -14,35 +14,35 @@ public class AddCS extends Container {
         setLayout(null);
 
         JLabel nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(75, 110, 125, 25);
+        nameLabel.setBounds(75, 100, 125, 30);
         add(nameLabel);
 
         JTextField nameField = new JTextField();
-        nameField.setBounds(225, 110, 200, 25);
+        nameField.setBounds(225, 100, 200, 30);
         add(nameField);
 
         JLabel sizeLabel = new JLabel("Size:");
-        sizeLabel.setBounds(75, 145, 125, 25);
+        sizeLabel.setBounds(75, 140, 125, 30);
         add(sizeLabel);
 
         JTextField sizeField = new JTextField();
-        sizeField.setBounds(225, 145, 200, 25);
+        sizeField.setBounds(225, 140, 200, 30);
         add(sizeField);
 
         JLabel costLabel = new JLabel("Price:");
-        costLabel.setBounds(75, 215, 125, 25);
+        costLabel.setBounds(75, 180, 125, 30);
         add(costLabel);
 
         JTextField costField = new JTextField();
-        costField.setBounds(225, 215, 200, 25);
+        costField.setBounds(225, 180, 200, 30);
         add(costField);
 
         JButton addButton = new JButton("Add");
-        addButton.setBounds(75, 320, 170, 30);
+        addButton.setBounds(75, 220, 170, 30);
         add(addButton);
 
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(255, 320, 170, 30);
+        backButton.setBounds(255, 220, 170, 30);
         add(backButton);
 
         backButton.addActionListener(new ActionListener() {
