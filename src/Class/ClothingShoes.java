@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class ClothingShoes extends Item implements Serializable {
+public class ClothingShoes extends Item implements Serializable, Info {
     private String size;
 
     public ClothingShoes() {
@@ -19,5 +19,10 @@ public class ClothingShoes extends Item implements Serializable {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    @Override
+    public String info() {
+        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", size:" + size ;
     }
 }

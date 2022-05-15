@@ -1,12 +1,15 @@
 package Main;
 import Class.*;
 import DataB.PackageData;
+import Menu.Login;
+import Menu.MainHeadings;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 
 public class Main {
@@ -18,28 +21,49 @@ public class Main {
             ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
-            /*if(pg.getOperationType().equals("ADD USER") || pg.getOperationType().equals("ADD PHONE") || pg.getOperationType().equals("DELETE PHONE")){
+            if(pg.getOperationType().equals("ADD USER") || pg.getOperationType().equals("ADD PHONE") || pg.getOperationType().equals("DELETE PHONE")){
                 outputStream.writeObject(pg);
             }
             else if(pg.getOperationType().equals("GET USER")){
                 outputStream.writeObject(pg);
-                Package infoFromServer = (Package)inputStream.readObject();
+                PackageData packageData = (PackageData)inputStream.readObject();
 
-                User user = infoFromServer.getUser();
-                LoginMenu.user = user;
+                User user = packageData.getUser();
+                Login.user = user;
             }
-            else if(pg.getOperationType().equals("LIST MY PHONE")){
+            else if(pg.getOperationType().equals("LIST REALTY")){
                 outputStream.writeObject(pg);
-                Package infoFromServer = (Package)inputStream.readObject();
-                ArrayList<PhoneNumbers> arrayListFromServer = infoFromServer.getPhoneNumbersArrayList();
+                PackageData packageData = (PackageData)inputStream.readObject();
+                ArrayList<Realty> arrayList = packageData.getRealties();
                 String s = "";
 
-                for(int i=0; i< arrayListFromServer.size(); i++){
-                    s += arrayListFromServer.get(i).info() + "\n";
+                for(int i=0; i< arrayList.size(); i++){
+                    s += arrayList.get(i) + "\n";
                 }
-                DeleteMenu.textArea.append(s);
-                MyListMenu.textArea.append(s);
-            }*/
+                MainHeadings.textArea.append(s);
+            }
+            else if(pg.getOperationType().equals("LIST CS")){
+                outputStream.writeObject(pg);
+                PackageData packageData = (PackageData)inputStream.readObject();
+                ArrayList<ClothingShoes> arrayList = packageData.getClothingShoes();
+                String s = "";
+
+                for(int i=0; i< arrayList.size(); i++){
+                    s += arrayList.get(i) + "\n";
+                }
+                MainHeadings.textArea.append(s);
+            }
+            else if(pg.getOperationType().equals("LIST ANIMAL")){
+                outputStream.writeObject(pg);
+                PackageData packageData = (PackageData)inputStream.readObject();
+                ArrayList<Animal> arrayList = packageData.getAnimals();
+                String s = "";
+
+                for(int i=0; i< arrayList.size(); i++){
+                    s += arrayList.get(i) + "\n";
+                }
+                MainHeadings.textArea.append(s);
+            }
             inputStream.close();
             outputStream.close();
             socket.close();

@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class Animal extends Item implements Serializable {
+public class Animal extends Item implements Serializable, Info {
     private String breed;
     private int age;
 
@@ -29,5 +29,10 @@ public class Animal extends Item implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String info() {
+        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", breed:" + breed + ", age:" + age ;
     }
 }

@@ -1,20 +1,19 @@
 package Menu;
-
+import Class.*;
 import DataB.DBManager;
 import DataB.PackageData;
 import Main.Main;
 import Main.Frame;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 import static DataB.DBManager.connection;
 
 public class Login extends Container {
+    public static User user;
     public Login(){
         setSize(500, 500);
         setLayout(null);
@@ -50,21 +49,19 @@ public class Login extends Container {
                     DBManager result = new DBManager();
                     result.connect();
                     Statement stmt = connection.createStatement();
-                    String sql = "select * from  visitor where login='"  + loginField.getText() + "' and password='" + passwordField.getText() +  "' ";
+                    String sql = "SELECT * FROM  user WHERE email='"  + loginField.getText() + "' AND password='" + passwordField.getText() +  "' ";
                     ResultSet rs = stmt.executeQuery(sql);
 
-                    PackageData pd = new PackageData("Get Visitor", loginField.getText());
+                    PackageData pd = new PackageData("GET USER", loginField.getText());
                     Main.connect(pd);
 
                     if(rs.next()){
                         Frame.login.setVisible(false);
                         Frame.userMenu.setVisible(true);
-                        //JOptionPane.showMessageDialog(null, "Hello " + visitor.getName() + "!");
                     }
                 } catch(Exception a){
                     a.printStackTrace();
                 }
-
                 loginField.setText(null);
                 passwordField.setText(null);
             }

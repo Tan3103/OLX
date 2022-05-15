@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56ac0d2-d7f7-4fe3-8132-26247e2bdc7c" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/src/Menu/AddAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/AddCS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/AddRealty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/DeleteMyAds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/MainHeadings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/MyAds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/MyPurchases.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mysql-connector-java-8.0.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Class/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Menu/AddAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Class/ClothingShoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/ClothingShoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/Realty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Realty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataB/PackageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/PackageData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MainHeadings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MainHeadings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/SignUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/UserMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/SThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/SThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -46,9 +48,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tannu/IdeaProjects/OLX/src/mysql-connector-java-8.0.28.jar",
+    "last_opened_file_path": "C:/Users/tannu/IdeaProjects/Phonebook",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -102,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652618325497</updated>
-      <workItem from="1652618326935" duration="7377000" />
+      <workItem from="1652618326935" duration="11705000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1652625642715</created>
@@ -111,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652625642715</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new">
+      <created>1652628952805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652628952805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

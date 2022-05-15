@@ -11,35 +11,27 @@ public class UserMenu extends Container {
         setLayout(null);
 
         JButton mainButton = new JButton("Main headings");
-        mainButton.setBounds(100, 70, 300, 40);
+        mainButton.setBounds(100, 100, 300, 40);
         add(mainButton);
 
-        JButton addRealtyButton = new JButton("Realty");
-        addRealtyButton.setBounds(100, 120, 300, 40);
-        add(addRealtyButton);
+        JButton addAdButton = new JButton("Add an ad");
+        addAdButton.setBounds(100, 150, 145, 40);
+        add(addAdButton);
 
-        JButton addCSButton = new JButton("Clothing/Shoes");
-        addCSButton.setBounds(100, 120, 300, 40);
-        add(addCSButton);
-
-        JButton addAnimalButton = new JButton("Animal");
-        addAnimalButton.setBounds(100, 120, 300, 40);
-        add(addAnimalButton);
+        JButton deleteButton = new JButton("Delete my ads");
+        deleteButton.setBounds(255, 150, 145, 40);
+        add(deleteButton);
 
         JButton purchasesButton = new JButton("My purchases");
-        purchasesButton.setBounds(100, 170, 300, 40);
+        purchasesButton.setBounds(100, 200, 300, 40);
         add(purchasesButton);
 
         JButton adsButton = new JButton("My ads");
-        adsButton.setBounds(100, 170, 300, 40);
+        adsButton.setBounds(100, 250, 300, 40);
         add(adsButton);
 
-        JButton deleteButton = new JButton("Delete my ads");
-        deleteButton.setBounds(100, 220, 300, 40);
-        add(deleteButton);
-
         JButton backButton = new JButton("Back to menu");
-        backButton.setBounds(100, 270, 300, 40);
+        backButton.setBounds(100, 300, 300, 40);
         add(backButton);
 
         mainButton.addActionListener(new ActionListener() {
@@ -50,29 +42,14 @@ public class UserMenu extends Container {
             }
         });
 
-        addRealtyButton.addActionListener(new ActionListener() {
+        addAdButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Frame.userMenu.setVisible(false);
-                Frame.addRealty.setVisible(true);
+                Frame.addAd.setVisible(true);
             }
         });
 
-        addCSButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Frame.userMenu.setVisible(false);
-                Frame.addCS.setVisible(true);
-            }
-        });
-
-        addAnimalButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Frame.userMenu.setVisible(false);
-                Frame.addAnimal.setVisible(true);
-            }
-        });
 
         purchasesButton.addActionListener(new ActionListener() {
             @Override

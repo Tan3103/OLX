@@ -80,12 +80,11 @@ public class MainHeadings extends Container {
         buyProductButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
+                PackageData pd1 = new PackageData("ADD CARD", Integer.parseInt(numberField.getText()));
+                Main.connect(pd1);
 
-                }
-                catch (Exception a){
-                    a.printStackTrace();
-                }
+                PackageData pd2 = new PackageData("DELETE ITEM", Integer.parseInt(numberField.getText()));
+                Main.connect(pd2);
             }
         });
 

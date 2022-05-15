@@ -37,50 +37,38 @@ public class SignUp extends Container {
         emailField.setBounds(200, 150, 200, 30);
         add(emailField);
 
-        JLabel label = new JLabel("The password must contain at least 1 uppercase letter,");
-        JLabel label1 = new JLabel("1 lowercase letter, 1 digit, 1 special character (@,$,!, ^)");
-        JLabel label2 = new JLabel("and a length greater than or equal to 8.");
-        label.setBounds(95, 185, 310, 20);
-        label1.setBounds(95, 200, 310, 20);
-        label2.setBounds(95, 215, 310, 20);
-        add(label);
-        add(label1);
-        add(label2);
-
         JLabel passwordLabel = new JLabel("PASSWORD:");
-        passwordLabel.setBounds(100, 240, 100, 30);
+        passwordLabel.setBounds(100, 190, 100, 30);
         add(passwordLabel);
 
         JTextField passwordField = new JTextField();
-        passwordField.setBounds(200, 240, 200, 30);
+        passwordField.setBounds(200, 190, 200, 30);
         add(passwordField);
 
         JButton singButton = new JButton("SIGN UP");
-        singButton.setBounds(100, 280, 140, 40);
+        singButton.setBounds(100, 230, 140, 40);
         add(singButton);
 
         JButton backButton = new JButton("BACK");
-        backButton.setBounds(250, 280, 150, 40);
+        backButton.setBounds(250, 230, 150, 40);
         add(backButton);
 
         singButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    //if(checker.checkerPassword(passwordField.getText())){
+                    if(!emailField.getText().equals( "" )  && !passwordField.getText().equals( "" ) &&
+                            !nameField.getText().equals( "" ) && !surnameField.getText().equals( "" )){
                         User newUser = new User(null, emailField.getText(), passwordField.getText(), nameField.getText(), surnameField.getText());
 
-                        PackageData pg = new PackageData("ADD", newUser);
+                        PackageData pg = new PackageData("ADD USER", newUser);
                         Main.connect(pg);
-
-                        JOptionPane.showMessageDialog(null, "Thank you for registering!!!");
-                    //}else{
+                    }else{
                         JOptionPane.showMessageDialog(null, "You wrote something wrong!!!");
-                    //}
+                    }
                 }catch (Exception a){
                     a.printStackTrace();
                 }
-
                 nameField.setText(null);
                 surnameField.setText(null);
                 emailField.setText(null);

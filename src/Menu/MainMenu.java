@@ -12,7 +12,7 @@ public class MainMenu extends Container {
 
         JLabel label = new JLabel("OLX");
         label.setFont(new Font("Tahoma", Font.PLAIN, 18));
-        label.setBounds(80, 100, 360, 40);
+        label.setBounds(235, 100, 360, 40);
         add(label);
 
         JButton loginButton = new JButton("LOGIN");

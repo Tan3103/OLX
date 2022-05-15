@@ -16,6 +16,7 @@ public class Frame extends JFrame {
     public static MyPurchases myPurchases;
     public static MyAds myAds;
     public static DeleteMyAds deleteMyAds;
+    public static AddAd addAd;
 
     public Frame() {
         setSize(500, 500);
@@ -77,5 +78,10 @@ public class Frame extends JFrame {
         deleteMyAds.setLocation(0, 0);
         deleteMyAds.setVisible(false);
         add(deleteMyAds);
+
+        addAd = new AddAd();
+        addAd.setLocation(0, 0);
+        addAd.setVisible(false);
+        add(addAd);
     }
 }

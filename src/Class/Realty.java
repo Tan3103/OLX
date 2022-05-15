@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class Realty extends Item implements Serializable {
+public class Realty extends Item implements Serializable, Info {
     private int numberRooms;
     private double square;
 
@@ -29,5 +29,10 @@ public class Realty extends Item implements Serializable {
 
     public void setSquare(double square) {
         this.square = square;
+    }
+
+    @Override
+    public String info() {
+        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", number of rooms:" + numberRooms + ", square:" + square ;
     }
 }
