@@ -2,7 +2,7 @@ package Class;
 
 import java.io.Serializable;
 
-public class Item implements Serializable {
+public class Item implements Serializable,Info {
     private Integer id;
     private String name;
     private int price;
@@ -38,5 +38,10 @@ public class Item implements Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    @Override
+    public String info() {
+        return getId() + ") " + getName() + ", Price:" + getPrice();
     }
 }

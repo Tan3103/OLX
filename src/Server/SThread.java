@@ -58,8 +58,8 @@ public class SThread extends Thread {
                     outputStream.writeObject(packageData);
                     break;
                 }
-                else if(pd.getOperationType().equals("ADD CARD")){
-                    manager.addCart(pd.getId(), pd.getId2());
+                else if(pd.getOperationType().equals("ADD CART")){
+                    manager.addCart(pd.getUser(), pd.getId());
                     break;
                 }
                 else if(pd.getOperationType().equals("LIST CART")){
@@ -90,6 +90,27 @@ public class SThread extends Thread {
                     Animal animal = pd.getAnimal();
                     User user = pd.getUser();
                     manager.addAnimal(animal, user);
+                    break;
+                }
+                else if(pd.getOperationType().equals("LIST MY REALTY")){
+                    ArrayList<Realty> array = manager.getMyRealty(pd.getUser());
+                    PackageData packageData = new PackageData();
+                    packageData.setRealties(array);
+                    outputStream.writeObject(packageData);
+                    break;
+                }
+                else if(pd.getOperationType().equals("LIST MY CS")){
+                    ArrayList<ClothingShoes> array = manager.getMyCS(pd.getUser());
+                    PackageData packageData = new PackageData();
+                    packageData.setClothingShoes(array);
+                    outputStream.writeObject(packageData);
+                    break;
+                }
+                else if(pd.getOperationType().equals("LIST MY ANIMAL")){
+                    ArrayList<Animal> array = manager.getMyAnimal(pd.getUser());
+                    PackageData packageData = new PackageData();
+                    packageData.setAnimals(array);
+                    outputStream.writeObject(packageData);
                     break;
                 }
             }

@@ -133,12 +133,12 @@ public class DBManager {
         }
     }
 
-    public void addCart(Integer user_id, Integer item_id) {
+    public void addCart(User user, Integer item_id) {
         try {
             PreparedStatement statement = connection.prepareStatement("" +
                     "INSERT INTO cart (id, userID, itemID) " +
                     "VALUES (NULL, ?, ?)");
-            statement.setInt(1,user_id);
+            statement.setInt(1,user.getId());
             statement.setInt(2, item_id);
 
             statement.executeUpdate();
@@ -245,5 +245,70 @@ public class DBManager {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Realty> getMyRealty(User user){
+        ArrayList<Realty> List = new ArrayList<>();
+        try{
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 1 AND userID = '" + user.getId() + "'");
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int price = resultSet.getInt("price");
+                int numberRooms = resultSet.getInt("numberRooms");
+                double square = resultSet.getInt("square");
+
+                List.add(new Realty(id,  name, price, numberRooms, square));
+            }
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return List;
+    }
+
+    public ArrayList<ClothingShoes> getMyCS(User user){
+        ArrayList<ClothingShoes> List = new ArrayList<>();
+        try{
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 2 AND userID = '" + user.getId() + "'");
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int price = resultSet.getInt("price");
+                String numberRooms = resultSet.getString("size");
+
+                List.add(new ClothingShoes(id,  name,  price, numberRooms));
+            }
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return List;
+    }
+
+    public ArrayList<Animal> getMyAnimal(User user){
+        ArrayList<Animal> List = new ArrayList<>();
+        try{
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 3 AND userID = '" + user.getId() + "'");
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()){
+                Integer id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                int price = resultSet.getInt("price");
+                String breed = resultSet.getString("breed");
+                int age = resultSet.getInt("age");
+
+                List.add(new Animal(id,  name, price, breed, age));
+            }
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return List;
     }
 }

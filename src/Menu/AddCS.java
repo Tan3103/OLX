@@ -48,7 +48,7 @@ public class AddCS extends Container {
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main.frame.addRealty.setVisible(false);
+                Main.frame.addCS.setVisible(false);
                 Main.frame.addAd.setVisible(true);
             }
         });

@@ -9,7 +9,6 @@ public class PackageData implements Serializable {
     private String login;
     private User user;
     private int id;
-    private int id2;
     private ArrayList<User> users;
     private ArrayList<Item> items;
     private ArrayList<Realty> realties;
@@ -21,6 +20,12 @@ public class PackageData implements Serializable {
     private Animal animal;
 
     public PackageData() {
+    }
+
+    public PackageData(String operationType, User user, int id) {
+        this.operationType = operationType;
+        this.user = user;
+        this.id = id;
     }
 
     public PackageData(String operationType, Realty realty, User user) {
@@ -61,12 +66,6 @@ public class PackageData implements Serializable {
         this.id = id;
     }
 
-    public PackageData(String operationType, int id, int id2) {
-        this.operationType = operationType;
-        this.id = id;
-        this.id2 = id2;
-    }
-
     public PackageData(int id) {
         this.id = id;
     }
@@ -78,11 +77,6 @@ public class PackageData implements Serializable {
     public PackageData(String operationType, User user) {
         this.operationType = operationType;
         this.user = user;
-    }
-
-    public PackageData(int id, int id2) {
-        this.id = id;
-        this.id2 = id2;
     }
 
     public PackageData(String operationType) {
@@ -156,14 +150,6 @@ public class PackageData implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getId2() {
-        return id2;
-    }
-
-    public void setId2(int id2) {
-        this.id2 = id2;
     }
 
     public ArrayList<Item> getItems() {
