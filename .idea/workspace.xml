@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e56ac0d2-d7f7-4fe3-8132-26247e2bdc7c" name="Changes" comment="new">
-      <change afterPath="$PROJECT_DIR$/src/Class/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Menu/AddAd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Class/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Class/ClothingShoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/ClothingShoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Class/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Class/Realty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Class/Realty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataB/PackageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataB/PackageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/MainHeadings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MainHeadings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/SignUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddAd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddAd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddCS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/AddRealty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/AddRealty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MyPurchases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MyPurchases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/SThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/SThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,7 @@
       <recent name="C:\Users\tannu\IdeaProjects\OLX\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="OLX" />
@@ -103,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652618325497</updated>
-      <workItem from="1652618326935" duration="11705000" />
+      <workItem from="1652618326935" duration="14850000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1652625642715</created>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652628952805</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new">
+      <created>1652633231980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652633231980</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

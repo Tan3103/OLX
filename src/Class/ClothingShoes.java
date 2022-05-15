@@ -8,8 +8,8 @@ public class ClothingShoes extends Item implements Serializable, Info {
     public ClothingShoes() {
     }
 
-    public ClothingShoes(Integer id, String name, String type, int price, String size) {
-        super(id, name, type, price);
+    public ClothingShoes(Integer id, String name, int price, String size) {
+        super(id, name, price);
         this.size = size;
     }
 
@@ -23,6 +23,6 @@ public class ClothingShoes extends Item implements Serializable, Info {
 
     @Override
     public String info() {
-        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", size:" + size ;
+        return getId() + ") " + getName() + ", Price:" + getPrice() + ", size:" + size ;
     }
 }

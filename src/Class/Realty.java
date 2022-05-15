@@ -9,8 +9,8 @@ public class Realty extends Item implements Serializable, Info {
     public Realty() {
     }
 
-    public Realty(Integer id, String name, String type, int price, int numberRooms, double square) {
-        super(id, name, type, price);
+    public Realty(Integer id, String name, int price, int numberRooms, double square) {
+        super(id, name, price);
         this.numberRooms = numberRooms;
         this.square = square;
     }
@@ -33,6 +33,6 @@ public class Realty extends Item implements Serializable, Info {
 
     @Override
     public String info() {
-        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", number of rooms:" + numberRooms + ", square:" + square ;
+        return getId() + ") " + getName() + ", Price:" + getPrice() + ", number of rooms:" + numberRooms + ", square:" + square ;
     }
 }

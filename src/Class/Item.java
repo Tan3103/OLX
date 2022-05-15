@@ -5,16 +5,14 @@ import java.io.Serializable;
 public class Item implements Serializable {
     private Integer id;
     private String name;
-    private String type;
     private int price;
 
     public Item() {
     }
 
-    public Item(Integer id, String name, String type, int price) {
+    public Item(Integer id, String name, int price) {
         this.id = id;
         this.name = name;
-        this.type = type;
         this.price = price;
     }
 
@@ -40,13 +38,5 @@ public class Item implements Serializable {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 }

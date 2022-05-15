@@ -66,12 +66,11 @@ public class DBManager {
             while(resultSet.next()){
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String type = resultSet.getString("type");
                 int price = resultSet.getInt("price");
                 int numberRooms = resultSet.getInt("numberRooms");
                 double square = resultSet.getInt("square");
 
-                List.add(new Realty(id,  name, type, price, numberRooms, square));
+                List.add(new Realty(id,  name, price, numberRooms, square));
             }
             statement.close();
         }catch (Exception e){
@@ -89,11 +88,10 @@ public class DBManager {
             while(resultSet.next()){
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String type = resultSet.getString("type");
                 int price = resultSet.getInt("price");
                 String numberRooms = resultSet.getString("size");
 
-                List.add(new ClothingShoes(id,  name, type, price, numberRooms));
+                List.add(new ClothingShoes(id,  name,  price, numberRooms));
             }
             statement.close();
         }catch (Exception e){
@@ -111,12 +109,11 @@ public class DBManager {
             while(resultSet.next()){
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String type = resultSet.getString("type");
                 int price = resultSet.getInt("price");
                 String breed = resultSet.getString("breed");
                 int age = resultSet.getInt("age");
 
-                List.add(new Animal(id,  name, type, price, breed, age));
+                List.add(new Animal(id,  name, price, breed, age));
             }
             statement.close();
         }catch (Exception e){
@@ -177,9 +174,8 @@ public class DBManager {
             while(resultSet.next()){
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                String type = resultSet.getString("type");
                 int price = resultSet.getInt("price");
-                item = new Item(id, type, name, price);
+                item = new Item(id, name, price);
             }
 
             statement.close();
@@ -187,5 +183,67 @@ public class DBManager {
             e.printStackTrace();
         }
         return item;
+    }
+
+    public void addRealty(Realty realty, User user) {
+        try{
+            PreparedStatement statement = connection.prepareStatement("" +
+                    "INSERT INTO item (id, name, price, numberRooms, square, userID, typeID)" +
+                    "VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+
+            statement.setString(1, realty.getName());
+            statement.setInt(2, realty.getPrice());
+            statement.setInt(3, realty.getNumberRooms());
+            statement.setDouble(4, realty.getSquare());
+            statement.setInt(5, user.getId());
+            statement.setInt(6, 1);
+
+            statement.executeUpdate();
+
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void addCS(ClothingShoes clothingShoes, User user) {
+        try{
+            PreparedStatement statement = connection.prepareStatement("" +
+                    "INSERT INTO item (id, name, price, size, userID, typeID) " +
+                    "VALUES (NULL, ?, ?, ?, ?, ?)");
+
+            statement.setString(1, clothingShoes.getName());
+            statement.setInt(2, clothingShoes.getPrice());
+            statement.setString(3, clothingShoes.getSize());
+            statement.setInt(4, user.getId());
+            statement.setInt(5, 2);
+
+            statement.executeUpdate();
+
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void addAnimal(Animal animal, User user) {
+        try{
+            PreparedStatement statement = connection.prepareStatement("" +
+                    "INSERT INTO item (id, name, price, breed, age, userID, typeID) " +
+                    "VALUES (NULL, ?, ?, ?, ?, ?, ?)");
+
+            statement.setString(1, animal.getName());
+            statement.setInt(2, animal.getPrice());
+            statement.setString(3, animal.getBreed());
+            statement.setInt(4, animal.getAge());
+            statement.setInt(5, user.getId());
+            statement.setInt(6, 3);
+
+            statement.executeUpdate();
+
+            statement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

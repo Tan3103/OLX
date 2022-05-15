@@ -9,8 +9,8 @@ public class Animal extends Item implements Serializable, Info {
     public Animal() {
     }
 
-    public Animal(Integer id, String name, String type, int price, String breed, int age) {
-        super(id, name, type, price);
+    public Animal(Integer id, String name, int price, String breed, int age) {
+        super(id, name, price);
         this.breed = breed;
         this.age = age;
     }
@@ -33,6 +33,6 @@ public class Animal extends Item implements Serializable, Info {
 
     @Override
     public String info() {
-        return getId() + ") " + getType() + ": " + getName() + ", Price:" + getPrice() + ", breed:" + breed + ", age:" + age ;
+        return getId() + ") " + getName() + ", Price:" + getPrice() + ", breed:" + breed + ", age:" + age ;
     }
 }

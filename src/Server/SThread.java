@@ -74,6 +74,24 @@ public class SThread extends Thread {
                     manager.deleteItem(id);
                     break;
                 }
+                else if (pd.getOperationType().equals("ADD REALTY")) {
+                    Realty realty = pd.getRealty();
+                    User user = pd.getUser();
+                    manager.addRealty(realty, user);
+                    break;
+                }
+                else if (pd.getOperationType().equals("ADD CS")) {
+                    ClothingShoes clothingShoes = pd.getClothingShoe();
+                    User user = pd.getUser();
+                    manager.addCS(clothingShoes, user);
+                    break;
+                }
+                else if (pd.getOperationType().equals("ADD ANIMAL")) {
+                    Animal animal = pd.getAnimal();
+                    User user = pd.getUser();
+                    manager.addAnimal(animal, user);
+                    break;
+                }
             }
 
             inputStream.close();

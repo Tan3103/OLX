@@ -15,8 +15,45 @@ public class PackageData implements Serializable {
     private ArrayList<Realty> realties;
     private ArrayList<ClothingShoes> clothingShoes;
     private ArrayList<Animal> animals;
+    private Item item;
+    private Realty realty;
+    private ClothingShoes clothingShoe;
+    private Animal animal;
 
     public PackageData() {
+    }
+
+    public PackageData(String operationType, Realty realty, User user) {
+        this.operationType = operationType;
+        this.user = user;
+        this.realty = realty;
+    }
+
+    public PackageData(String operationType,ClothingShoes clothingShoe, User user) {
+        this.operationType = operationType;
+        this.user = user;
+        this.clothingShoe = clothingShoe;
+    }
+
+    public PackageData(String operationType, Animal animal, User user) {
+        this.operationType = operationType;
+        this.user = user;
+        this.animal = animal;
+    }
+
+    public PackageData(String operationType, Realty realty) {
+        this.operationType = operationType;
+        this.realty = realty;
+    }
+
+    public PackageData(String operationType, ClothingShoes clothingShoe) {
+        this.operationType = operationType;
+        this.clothingShoe = clothingShoe;
+    }
+
+    public PackageData(String operationType, Animal animal) {
+        this.operationType = operationType;
+        this.animal = animal;
     }
 
     public PackageData(String operationType, int id) {
@@ -135,5 +172,29 @@ public class PackageData implements Serializable {
 
     public void setItems(ArrayList<Item> items) {
         this.items = items;
+    }
+
+    public Realty getRealty() {
+        return realty;
+    }
+
+    public void setRealty(Realty realty) {
+        this.realty = realty;
+    }
+
+    public ClothingShoes getClothingShoe() {
+        return clothingShoe;
+    }
+
+    public void setClothingShoe(ClothingShoes clothingShoe) {
+        this.clothingShoe = clothingShoe;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 }

@@ -3,6 +3,8 @@ import Class.*;
 import DataB.PackageData;
 import Menu.Login;
 import Menu.MainHeadings;
+import Menu.MyAds;
+import Menu.MyPurchases;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -21,7 +23,9 @@ public class Main {
             ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
             ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
-            if(pg.getOperationType().equals("ADD USER") || pg.getOperationType().equals("ADD PHONE") || pg.getOperationType().equals("DELETE PHONE")){
+            if(pg.getOperationType().equals("ADD USER") || pg.getOperationType().equals("DELETE ITEM") ||
+                    pg.getOperationType().equals("ADD REALTY") ||pg.getOperationType().equals("ADD CS") ||
+                    pg.getOperationType().equals("ADD ANIMAL")){
                 outputStream.writeObject(pg);
             }
             else if(pg.getOperationType().equals("GET USER")){
@@ -63,6 +67,17 @@ public class Main {
                     s += arrayList.get(i) + "\n";
                 }
                 MainHeadings.textArea.append(s);
+            }
+            else if(pg.getOperationType().equals("LIST CART")){
+                outputStream.writeObject(pg);
+                PackageData packageData = (PackageData)inputStream.readObject();
+                ArrayList<Item> arrayList = packageData.getItems();
+                String s = "";
+
+                for(int i=0; i< arrayList.size(); i++){
+                    s += arrayList.get(i) + "\n";
+                }
+                MyPurchases.textArea.append(s);
             }
             inputStream.close();
             outputStream.close();
