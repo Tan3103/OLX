@@ -34,43 +34,67 @@ public class UserMenu extends Container {
         adsButton.setBounds(100, 170, 300, 40);
         add(adsButton);
 
-        JButton purchasedGoodsButton = new JButton("Delete my product");
-        purchasedGoodsButton.setBounds(100, 220, 300, 40);
-        add(purchasedGoodsButton);
+        JButton deleteButton = new JButton("Delete my ads");
+        deleteButton.setBounds(100, 220, 300, 40);
+        add(deleteButton);
 
         JButton backButton = new JButton("Back to menu");
         backButton.setBounds(100, 270, 300, 40);
         add(backButton);
 
-        catalogButton.addActionListener(new ActionListener() {
+        mainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Frame.userMenu.setVisible(false);
-                Frame.catalogMenu.setVisible(true);
+                Frame.mainHeadings.setVisible(true);
             }
         });
 
-        findButton.addActionListener(new ActionListener() {
+        addRealtyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Frame.userMenu.setVisible(false);
-                Frame.findMenu.setVisible(true);
+                Frame.addRealty.setVisible(true);
             }
         });
 
-        discountButton.addActionListener(new ActionListener() {
+        addCSButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Frame.userMenu.setVisible(false);
-                Frame.discountMenu.setVisible(true);
+                Frame.addCS.setVisible(true);
             }
         });
 
-        purchasedGoodsButton.addActionListener(new ActionListener() {
+        addAnimalButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Frame.userMenu.setVisible(false);
-                Frame.purchasedGoods.setVisible(true);
+                Frame.addAnimal.setVisible(true);
+            }
+        });
+
+        purchasesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Frame.userMenu.setVisible(false);
+                Frame.myPurchases.setVisible(true);
+            }
+        });
+
+        adsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Frame.myAds.setVisible(false);
+                Frame.myAds.setVisible(true);
+            }
+        });
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Frame.userMenu.setVisible(false);
+                Frame.deleteMyAds.setVisible(true);
             }
         });
 

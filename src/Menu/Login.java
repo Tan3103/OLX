@@ -59,7 +59,7 @@ public class Login extends Container {
                     if(rs.next()){
                         Frame.login.setVisible(false);
                         Frame.userMenu.setVisible(true);
-                        JOptionPane.showMessageDialog(null, "Hello " + visitor.getName() + "!");
+                        //JOptionPane.showMessageDialog(null, "Hello " + visitor.getName() + "!");
                     }
                 } catch(Exception a){
                     a.printStackTrace();

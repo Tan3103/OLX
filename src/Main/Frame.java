@@ -9,6 +9,13 @@ public class Frame extends JFrame {
     public static Login login;
     public static SignUp signUp;
     public static UserMenu userMenu;
+    public static MainHeadings mainHeadings;
+    public static AddRealty addRealty;
+    public static AddCS addCS;
+    public static AddAnimal addAnimal;
+    public static MyPurchases myPurchases;
+    public static MyAds myAds;
+    public static DeleteMyAds deleteMyAds;
 
     public Frame() {
         setSize(500, 500);
@@ -34,5 +41,41 @@ public class Frame extends JFrame {
         userMenu.setLocation(0, 0);
         userMenu.setVisible(false);
         add(userMenu);
+
+        mainHeadings = new MainHeadings();
+        mainHeadings.setLocation(0, 0);
+        mainHeadings.setVisible(false);
+        add(mainHeadings);
+
+        addRealty = new AddRealty();
+        addRealty.setLocation(0, 0);
+        addRealty.setVisible(false);
+        add(addRealty);
+
+        addCS = new AddCS();
+        addCS.setLocation(0, 0);
+        addCS.setVisible(false);
+        add(addCS);
+
+        addAnimal = new AddAnimal();
+        addAnimal.setLocation(0, 0);
+        addAnimal.setVisible(false);
+        add(addAnimal);
+
+
+        myPurchases = new MyPurchases();
+        myPurchases.setLocation(0, 0);
+        myPurchases.setVisible(false);
+        add(myPurchases);
+
+        myAds = new MyAds();
+        myAds.setLocation(0, 0);
+        myAds.setVisible(false);
+        add(myAds);
+
+        deleteMyAds = new DeleteMyAds();
+        deleteMyAds.setLocation(0, 0);
+        deleteMyAds.setVisible(false);
+        add(deleteMyAds);
     }
 }

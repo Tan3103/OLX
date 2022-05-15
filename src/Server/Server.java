@@ -11,7 +11,7 @@ public class Server{
                 System.out.println("---------------");
                 Socket socket = serverSocket.accept();
                 System.out.println("Connected");
-                ServerThread st = new ServerThread(socket);
+                SThread st = new SThread(socket);
                 st.start();
             }
         }catch (Exception e){
