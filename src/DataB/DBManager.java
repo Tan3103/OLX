@@ -1,5 +1,7 @@
 package DataB;
 import Class.*;
+import Menu.Login;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -57,10 +59,10 @@ public class DBManager {
         return user;
     }
 
-    public ArrayList<Realty> getAllRealty(){
+    public ArrayList<Realty> getAllRealty(User user){
         ArrayList<Realty> List = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 1");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 1 AND UserID != '" +user.getId()+"'");
             ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()){
@@ -79,10 +81,10 @@ public class DBManager {
         return List;
     }
 
-    public ArrayList<ClothingShoes> getAllCS(){
+    public ArrayList<ClothingShoes> getAllCS(User user){
         ArrayList<ClothingShoes> List = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 2");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 2 AND UserID != '" + user.getId()+"'");
             ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()){
@@ -100,10 +102,10 @@ public class DBManager {
         return List;
     }
 
-    public ArrayList<Animal> getAllAnimal(){
+    public ArrayList<Animal> getAllAnimal(User user){
         ArrayList<Animal> List = new ArrayList<>();
         try{
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 3");
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM item WHERE typeID = 3 AND UserID != '" +user.getId()+"'");
             ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()){

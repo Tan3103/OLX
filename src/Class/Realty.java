@@ -6,9 +6,6 @@ public class Realty extends Item implements Serializable, Info {
     private int numberRooms;
     private double square;
 
-    public Realty() {
-    }
-
     public Realty(Integer id, String name, int price, int numberRooms, double square) {
         super(id, name, price);
         this.numberRooms = numberRooms;

@@ -63,7 +63,6 @@ public class Frame extends JFrame {
         addAnimal.setVisible(false);
         add(addAnimal);
 
-
         myPurchases = new MyPurchases();
         myPurchases.setLocation(0, 0);
         myPurchases.setVisible(false);

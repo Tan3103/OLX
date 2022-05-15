@@ -13,10 +13,9 @@ public class UserMenu extends Container {
         JButton mainButton = new JButton("Main headings");
         mainButton.setBounds(100, 100, 300, 40);
         add(mainButton);
-
-        JButton addAdButton = new JButton("Add an ad");
-        addAdButton.setBounds(100, 150, 145, 40);
-        add(addAdButton);
+        JButton adsButton = new JButton("My ads");
+        adsButton.setBounds(100, 150, 145, 40);
+        add(adsButton);
 
         JButton deleteButton = new JButton("Delete my ads");
         deleteButton.setBounds(255, 150, 145, 40);
@@ -26,9 +25,9 @@ public class UserMenu extends Container {
         purchasesButton.setBounds(100, 200, 300, 40);
         add(purchasesButton);
 
-        JButton adsButton = new JButton("My ads");
-        adsButton.setBounds(100, 250, 300, 40);
-        add(adsButton);
+        JButton addAdButton = new JButton("Add an ad");
+        addAdButton.setBounds(100, 250, 300, 40);
+        add(addAdButton);
 
         JButton backButton = new JButton("Back to menu");
         backButton.setBounds(100, 300, 300, 40);

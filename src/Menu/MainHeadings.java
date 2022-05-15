@@ -53,7 +53,7 @@ public class MainHeadings extends Container {
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("LIST REALTY");
+                PackageData pd = new PackageData("LIST REALTY", Login.user);
                 Main.connect(pd);
             }
         });
@@ -63,7 +63,7 @@ public class MainHeadings extends Container {
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("LIST CS");
+                PackageData pd = new PackageData("LIST CS", Login.user);
                 Main.connect(pd);
             }
         });
@@ -73,7 +73,7 @@ public class MainHeadings extends Container {
             public void actionPerformed(ActionEvent e) {
                 textArea.setText(null);
 
-                PackageData pd = new PackageData("LIST ANIMAL");
+                PackageData pd = new PackageData("LIST ANIMAL", Login.user);
                 Main.connect(pd);
             }
         });
@@ -89,6 +89,8 @@ public class MainHeadings extends Container {
 
                 PackageData pd2 = new PackageData("DELETE ITEM", Integer.parseInt(numberField.getText()));
                 Main.connect(pd2);
+
+                numberField.setText(null);
             }
         });
 

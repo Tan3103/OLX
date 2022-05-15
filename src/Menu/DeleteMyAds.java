@@ -2,7 +2,6 @@ package Menu;
 
 import DataB.PackageData;
 import Main.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -84,6 +83,8 @@ public class DeleteMyAds extends Container {
 
                 PackageData pd = new PackageData("DELETE ITEM", Integer.parseInt(numberField.getText()));
                 Main.connect(pd);
+
+                numberField.setText(null);
             }
         });
 

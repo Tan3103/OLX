@@ -6,9 +6,6 @@ public class Animal extends Item implements Serializable, Info {
     private String breed;
     private int age;
 
-    public Animal() {
-    }
-
     public Animal(Integer id, String name, int price, String breed, int age) {
         super(id, name, price);
         this.breed = breed;

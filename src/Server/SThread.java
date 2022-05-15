@@ -44,21 +44,21 @@ public class SThread extends Thread {
                     break;
                 }
                 else if(pd.getOperationType().equals("LIST REALTY")){
-                    ArrayList<Realty> array = manager.getAllRealty();
+                    ArrayList<Realty> array = manager.getAllRealty(pd.getUser());
                     PackageData packageData = new PackageData();
                     packageData.setRealties(array);
                     outputStream.writeObject(packageData);
                     break;
                 }
                 else if(pd.getOperationType().equals("LIST CS")){
-                    ArrayList<ClothingShoes> array = manager.getAllCS();
+                    ArrayList<ClothingShoes> array = manager.getAllCS(pd.getUser());
                     PackageData packageData = new PackageData();
                     packageData.setClothingShoes(array);
                     outputStream.writeObject(packageData);
                     break;
                 }
                 else if(pd.getOperationType().equals("LIST ANIMAL")){
-                    ArrayList<Animal> array = manager.getAllAnimal();
+                    ArrayList<Animal> array = manager.getAllAnimal(pd.getUser());
                     PackageData packageData = new PackageData();
                     packageData.setAnimals(array);
                     outputStream.writeObject(packageData);
@@ -120,7 +120,6 @@ public class SThread extends Thread {
                     break;
                 }
             }
-
             inputStream.close();
             outputStream.close();
             socket.close();

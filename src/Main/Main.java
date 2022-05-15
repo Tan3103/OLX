@@ -2,18 +2,13 @@ package Main;
 import Class.*;
 import DataB.PackageData;
 import Menu.*;
-
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
-
 
 public class Main {
     public static Frame frame;
-
     public static void connect(PackageData pg){
         try{
             Socket socket = new Socket("127.0.0.1", 8484);
