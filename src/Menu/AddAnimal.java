@@ -4,6 +4,7 @@ import DataB.PackageData;
 import Main.Main;
 import Class.*;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +13,13 @@ public class AddAnimal extends Container {
     public AddAnimal(){
         setSize(500, 500);
         setLayout(null);
+
+        Border solidBorder = BorderFactory.createLineBorder(Color.BLACK, 1);
+        JLabel label = new JLabel(" ANIMAL");
+        label.setBorder(solidBorder);
+        label.setFont(new Font("Courier New", Font.PLAIN, 20));
+        label.setBounds(205, 50, 100, 40);
+        add(label);
 
         JLabel nameLabel = new JLabel("Name:");
         nameLabel.setBounds(75, 100, 125, 30);

@@ -14,11 +14,11 @@ public class UserMenu extends Container {
         mainButton.setBounds(100, 100, 300, 40);
         add(mainButton);
         JButton adsButton = new JButton("My ads");
-        adsButton.setBounds(100, 150, 145, 40);
+        adsButton.setBounds(100, 150, 140, 40);
         add(adsButton);
 
         JButton deleteButton = new JButton("Delete my ads");
-        deleteButton.setBounds(255, 150, 145, 40);
+        deleteButton.setBounds(260, 150, 140, 40);
         add(deleteButton);
 
         JButton purchasesButton = new JButton("My purchases");
